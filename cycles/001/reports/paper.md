@@ -67,6 +67,10 @@ The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap 
 
 *Recorded learning curves.*
 
+![First saved test examples; no correctness-based selection](../figures/examples.png)
+
+*First saved test examples; no correctness-based selection.*
+
 # Claims and evidence
 
 Claims have not yet been distilled.
