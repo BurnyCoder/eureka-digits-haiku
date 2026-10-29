@@ -1,10 +1,26 @@
 # All experiments
 
+Recorded harness status: **budget_exhausted**; 5 operational phases accepted. Measurements below do not imply completion of unaccepted phases.
+
 | Experiment | Method | Seed | Split | Accuracy | Seconds | Device |
 |---|---|---:|---|---:|---:|---|
+| class_prior_s0 | class_prior | 0 | test | 0.102778 | 0.026 | cpu |
+| logistic_s0 | logistic | 0 | test | 0.955556 | 0.107 | cpu |
 | pilot_regularized_s0 | regularized | 0 | validation | 0.966574 | 6.805 | cuda |
+| regularized_s0 | regularized | 0 | test | 0.963889 | 0.486 | cuda |
+| regularized_s1 | regularized | 1 | test | 0.969444 | 6.630 | cuda |
+| regularized_s2 | regularized | 2 | test | 0.969444 | 2.553 | cuda |
+| sensitivity_s0 | sensitivity | 0 | test | 0.963889 | 2.525 | cuda |
+| sensitivity_s1 | sensitivity | 1 | test | 0.969444 | 2.583 | cuda |
+| sensitivity_s2 | sensitivity | 2 | test | 0.969444 | 2.481 | cuda |
+| shuffled_labels_s0 | shuffled_labels | 0 | test | 0.061111 | 2.465 | cuda |
+| shuffled_labels_s1 | shuffled_labels | 1 | test | 0.116667 | 2.470 | cuda |
+| shuffled_labels_s2 | shuffled_labels | 2 | test | 0.108333 | 2.367 | cuda |
+| unregularized_s0 | unregularized | 0 | test | 0.963889 | 2.426 | cuda |
+| unregularized_s1 | unregularized | 1 | test | 0.969444 | 2.393 | cuda |
+| unregularized_s2 | unregularized | 2 | test | 0.969444 | 2.501 | cuda |
 
-The registered primary comparison is pending; no confirmatory conclusion is available.
+The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap interval [0.000000, 0.000000]. The registered decision is **inconclusive**. The sample standard deviation across seed effects is 0.000000. The interval uses 10000 paired resamples of test examples and conditions on the trained models.
 
 - **question**: "Does AdamW weight decay improve held-out accuracy of a small MLP on the bundled digits data?"
 - **architecture**: [64, 128, 10]
@@ -18,7 +34,7 @@ The registered primary comparison is pending; no confirmatory conclusion is avai
 - **analysis_plan**: "Use 10000 paired bootstrap resamples of test example indices with RNG seed 2026, preserving pairing across methods and all trained seeds. This interval conditions on the trained models and does not estimate training-population uncertainty. Separately show each seed effect and its sample standard deviation. Treat other comparisons as descriptive, with no post-hoc primary selection."
 - **hyperparameter_rationale**: "Small prespecified network and fixed training budget provide fast feedback on an established task. The three decay values are a descriptive local sensitivity check, not a test-selected sweep. Three seeds expose limited initialization sensitivity; they do not support broad population claims."
 
-This is a preliminary artifact generated before final interpretation. All available outcomes are retained; a completed experiment is not evidence that the favored hypothesis is true.
+The analysis phase was not accepted before this run stopped. Its draft interpretation and claim ledger are preserved in the repository, but are excluded from this generated paper because their evidence contracts remain unresolved. The tables and primary calculation above are regenerated from saved predictions; review remains incomplete.
 
 ## Sources
 
@@ -38,3 +54,5 @@ This is a preliminary artifact generated before final interpretation. All availa
 - [S14: How I Think About My Research Process: Explore, Understand, Distill, Neel Nanda, 26 Apr 2025](https://www.greaterwrong.com/posts/hjMy4ZxS5ogA9cTYK/how-i-think-about-my-research-process-explore-understand)
 - [S15: Construction of Confidence Intervals, Dalitz, arXiv:1807.03582](https://arxiv.org/abs/1807.03582)
 - [S16: safetensors torch API documentation (save_file, load_file)](https://huggingface.co/docs/safetensors/en/api/torch)
+- [S17: scipy.stats.bootstrap documentation (percentile method, paired option)](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)
+- [S18: oceCens percci documentation (percentile interval, citing Efron & Tibshirani 1993, p. 168)](https://search.r-project.org/CRAN/refmans/oceCens/html/percci.html)

@@ -1,6 +1,19 @@
-# Highlights and anomalies (research phase, cycle 001)
+# Highlights and anomalies (cycle 001)
 
-No experimental results exist yet. Everything below comes from reading sources, the fixture's code, and arithmetic on the registered constants. Full detail and citations are in `reports/research.md` and `research/sources.json`.
+Results from the experiments phase are in the first section; the research-phase notes that follow were written before any results existed. Full detail is in `reports/experiments.md`, `reports/research.md`, and `research/sources.json`.
+
+## Experiments phase: registered result (test split, 3 seeds)
+
+1. **The registered primary result is inconclusive, and its interval is degenerate.** Mean paired Δ accuracy (decay 0.01 − 0) is 0.00 pp, with a paired bootstrap CI of [0.00, 0.00] pp. No test prediction changed between decay 0.01 and decay 0 in any seed (0 discordant pairs; McNemar p = 1.0). The falsification rule is not triggered, and the result is not evidence of equivalence.
+2. **Decay was applied, but its effect did not reach the argmax.** Final training loss is 7–8e-4 nats higher with decay in all seeds, and loss histories differ at every epoch. Almost every weight entry changes (≥99.99% in each checkpoint). The whole-vector weight norm shrinks 0.40–0.41% against a decay-only prediction of 0.85%, about 0.48× the prediction; gradient updates likely offset part of the shrink (a hypothesis, not decomposed). The sensitivity arm (decay 0.001) also scores 0.00 pp, and its test predictions are identical to the unregularized arm's, so the dose-response cannot be assessed.
+3. **Exploratory (post-hoc, not registered): decay raises test NLL by +0.00048 nats** (conditional CI [+0.00024, +0.00070], positive in 3 of 3 seeds) and lowers the mean max-softmax confidence by about 0.0006 in every seed. This is consistent with the shrink mechanism and has the opposite sign to the directional hypothesis. It cannot become confirmatory in this cycle.
+4. **Controls behaved as expected.** Shuffled-label test accuracy is 0.061, 0.117, 0.108 (mean 0.095), with no value above the 0.20 bug threshold. The logistic baseline gets 0.956 and the class-prior baseline 0.103.
+5. **Prediction check.** P1, P2, P4, P5, P6, P7, and P8 held (P5 window 0.05–0.16 as preregistered; observed 0.061, 0.117, 0.108). P3 was not observed (the CI is not above 0). P2 held only trivially, because the interval is degenerate.
+6. **Known limitation of the frozen fixture.** `study.py` runs a forward pass over all 1797 inputs, including test features, at the checkpoint reload check and the final prediction step. Test labels are used only in the accuracy computation, and no training gradient touches test rows. This is disclosed in `reports/experiments.md` and `reports/pilot.md`.
+7. **Reproducibility.** `scripts/rerun_from_scratch.py` retrained 13 records from initialization in a fresh temporary directory outside the cycle; `regularized_s0` reused the pilot checkpoint. All 14 arm records matched the cycle's records on checkpoint SHA-256, `y_true`, `y_pred`, example IDs, accuracy, and per-epoch history (`research/rerun_comparison.json`). Independent record and checkpoint verification also passed (`research/record_verification.json`).
+8. **Earlier draft corrected.** An earlier experiments attempt left draft reports, now preserved in `research/attempts/`. The current verdicts are re-derived from the preregistration and the records. Each handoff correction (duplicate IDs, protocol and code hashes, start time, method and analysis kind) was checked against the current artifacts; see `reports/experiments.md` §6.
+
+## Research-phase notes (written before any results)
 
 ## Highlights
 
