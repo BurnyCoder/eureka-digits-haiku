@@ -33,6 +33,8 @@ The objective is reproducible evidence and an inspectable research process. This
 
 ![Research architecture](../figures/architecture.png)
 
+*Research architecture.*
+
 # Results
 
 | Method | Seed | Split | Accuracy | Seconds | Device |
@@ -57,7 +59,11 @@ The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap 
 
 ![All recorded accuracies](../figures/accuracy.png)
 
+*All recorded accuracies.*
+
 ![Recorded learning curves](../figures/loss.png)
+
+*Recorded learning curves.*
 
 # Claims and evidence
 
