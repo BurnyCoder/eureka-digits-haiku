@@ -209,10 +209,10 @@
     "id": "1443ff26c975",
     "backend": "claude",
     "requested_model": "haiku",
-    "status": "running",
-    "message": "",
+    "status": "complete",
+    "message": "All required phases completed",
     "calls": 20,
-    "active_seconds": 4311.883461400052,
+    "active_seconds": 4347.981194200052,
     "limits": {
       "minutes": 180.0,
       "calls": 60
@@ -266,7 +266,8 @@
       "pilot",
       "experiments",
       "analysis",
-      "review"
+      "review",
+      "publish"
     ],
     "attempts": [
       {
