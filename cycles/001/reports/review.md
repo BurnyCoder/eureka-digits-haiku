@@ -1,5 +1,7 @@
 # Review: cycle 001 (AdamW weight decay on a fixed digits MLP)
 
+**Historical model review.** A [subsequent parent review](../../../reports/extended-parent-review.md) found overstatements this pass missed. In particular, the checks below do not rule out every implementation bug, identify an accuracy mechanism from checkpoint norms, or establish a hard detection threshold. Retaining this report documents the limits of the model's review rather than endorsing those claims.
+
 Phase: review. Scope: one substantive pass over the science, code, citations, reproducibility, and presentation (paper, site, and reproduction doc). No training was run, and no new experiment or test-split evaluation was made. Interpretation of results is unchanged from the analysis phase.
 
 ## What was checked

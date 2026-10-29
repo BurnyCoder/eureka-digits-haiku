@@ -66,7 +66,7 @@
   {
     "id": "S09",
     "title": "Understanding Decoupled and Early Weight Decay, Bjorck et al., 2020",
-    "url": "https://consensus.app/papers/details/cfe1ea949a105c5f953b251b2af3701e/",
+    "url": "https://arxiv.org/abs/2012.13841",
     "summary": "Reports that decoupled weight decay mainly fixes the mixing of the L2 term into Adam's first-moment buffer, and that applying decay only early in training can regularize. Read from the search-index abstract only; the full text was not read. Shows that the decoupled-vs-L2 difference is a known active question, not a settled one.",
     "license": "unknown",
     "accessed_at": "2026-10-29"
@@ -74,7 +74,7 @@
   {
     "id": "S10",
     "title": "Towards Understanding Convergence and Generalization of AdamW, Zhou et al., IEEE TPAMI 2024",
-    "url": "https://consensus.app/papers/details/c179f549f272597888e9890895eef7f1/",
+    "url": "https://panzhous.github.io/assets/pdf/2024-TPAMI-AdamW.pdf",
     "summary": "Claims AdamW minimizes a dynamically regularized loss and has smaller generalization error than Adam and L2-Adam from a Bayesian posterior view. Read from the abstract only; theory not checked and no empirical claims relied upon.",
     "license": "unknown",
     "accessed_at": "2026-10-29"

@@ -8,6 +8,8 @@ Method: regularized. Analysis: exploratory.
 
 ## Method, provenance, and learning
 
+- **analysis_kind**: "confirmatory"
+- **objective**: "Exercise the complete research harness on a bounded reproducible study; negative and inconclusive effects are valid."
 - **question**: "Does AdamW weight decay improve held-out accuracy of a small MLP on the bundled digits data?"
 - **architecture**: [64, 128, 10]
 - **optimizer**: "AdamW"

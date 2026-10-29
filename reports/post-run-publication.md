@@ -1,6 +1,8 @@
-# Partial trial and post-run publication
+# Historical cutoff and subsequent publication
 
-The bounded Haiku trial reached its active-time limit. Its authoritative status and accepted phases are recorded in [the execution summary](run-1443ff26c975.json). Analysis, review and final publication were not accepted. No additional model invocation was used to complete those phases after the cutoff.
+This document describes the original bounded cutoff. The [original summary](original-bounded-run-1443ff26c975.json) preserves that outcome. The user later authorized a [larger budget](budget-extension.md); the [current execution summary](run-1443ff26c975.json) records cumulative continuation. Current claims and interpretation include [parent review corrections](extended-parent-review.md). Statements below about unaccepted drafts describe their state at the original cutoff, not the corrected current version.
+
+The bounded Haiku trial reached its active-time limit. Its original status and accepted phases are recorded in [the cutoff summary](original-bounded-run-1443ff26c975.json). Analysis, review and final publication were not accepted within that allowance. The immediate post-run publication used no additional model invocation; later authorized continuation is recorded separately.
 
 The saved experiments are retained, including controls and inconclusive outcomes. After the cutoff, the parent harness developer regenerated numerical artifacts and published the available checkpoint bundle and this partial snapshot. This bookkeeping and the separate artifact-verification work are outside the bounded trial and do not change its completion status.
 
