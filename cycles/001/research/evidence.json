@@ -1,152 +1,86 @@
 [
   {
-    "id": "regularized_s0",
-    "path": "results/regularized_s0.json",
-    "sha256": "3b3eba6592ff16a9fdd2942b85088c49bcf3d08cc0e096813692ac8a65a88134",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "regularized_s1",
-    "path": "results/regularized_s1.json",
-    "sha256": "9b72aef59779a7ce769d64d51d7162d26deb9efb7bd168585e510c21fd5a24ec",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "regularized_s2",
-    "path": "results/regularized_s2.json",
-    "sha256": "f8cb7c43317e3a75ae1c7d6c1a8e252925432276f998aa7720781d0a246954aa",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "unregularized_s0",
-    "path": "results/unregularized_s0.json",
-    "sha256": "fb76341a2aa6f744b9be863c86ac37a661d3f47360732e71ffded25122519014",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "unregularized_s1",
-    "path": "results/unregularized_s1.json",
-    "sha256": "61ee0eea4f08517c09b12800528d63af18609bf8417c628d3d86cef65f36455c",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "unregularized_s2",
-    "path": "results/unregularized_s2.json",
-    "sha256": "064a9c39746af425b40424e6526b426cb65d3e694d57db1c14d7a0bcc8f14beb",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "sensitivity_s0",
-    "path": "results/sensitivity_s0.json",
-    "sha256": "82a99178ff173f9fd912792ea3693edb363b5607b27741192b7455e630a4d86d",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "sensitivity_s1",
-    "path": "results/sensitivity_s1.json",
-    "sha256": "b4a1e6078e286bb06140756642f9e8510acab31878f0eaef5041b6b1a5dc0158",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "sensitivity_s2",
-    "path": "results/sensitivity_s2.json",
-    "sha256": "18ffe8465a1f0bae747bb37fdad1da20f34439d0de9fd3e15f48e6d2ead620a4",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "shuffled_labels_s0",
-    "path": "results/shuffled_labels_s0.json",
-    "sha256": "277cd6a5e94e840971654650e54c9e905f4ea7bf433cb24053f02d58ded66629",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "shuffled_labels_s1",
-    "path": "results/shuffled_labels_s1.json",
-    "sha256": "d31671ef7ac9ecac27180b4e85197d2a70980746846ddaa4d48699ce95a37856",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "shuffled_labels_s2",
-    "path": "results/shuffled_labels_s2.json",
-    "sha256": "ecbc5c6e4e44b1fb8dafb1b905fa759d9cc3b808b9df140fd2349828ec0afdeb",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "logistic_s0",
-    "path": "results/logistic_s0.json",
-    "sha256": "213744d033a7e4b19bca72400f9975c276505c52abec53297ef2198dd3362f01",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "class_prior_s0",
-    "path": "results/class_prior_s0.json",
-    "sha256": "8c7b81b348f46e0e956b298acf4fc88dc09b264bdb282d69ea0d2ac22ea01ca7",
-    "analysis_kind": "confirmatory"
-  },
-  {
-    "id": "pilot_regularized_s0",
-    "path": "results/pilot_regularized_s0.json",
-    "sha256": "ec65772bf2bf9491d0e5439a73b13c1ddcdf0399b0a9208d20e4c5076c26490e",
-    "analysis_kind": "confirmatory"
-  },
-  {
     "id": "L01",
-    "path": "research/experiment_summary.json",
-    "sha256": "6d6737cb1fd338e520076991ef779ad7a709ce3bb035566ff588d66dfe18e05d",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/6a653ce0bf49efda29cd18a2bc166c649d2677629ee2188d6e32fc5f5fd0c01a.json",
+    "sha256": "6a653ce0bf49efda29cd18a2bc166c649d2677629ee2188d6e32fc5f5fd0c01a",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/experiment_summary.json"
   },
   {
     "id": "L02",
-    "path": "research/decay_mechanism.json",
-    "sha256": "b4cc5abfec4ebc9159c7a40575e06985682dcb258ae5c24af08be0bc2595daee",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/a5852561af1b5d574d07dd38be1ca771f394daefa2ab9ed7dcf2226099d4557b.json",
+    "sha256": "a5852561af1b5d574d07dd38be1ca771f394daefa2ab9ed7dcf2226099d4557b",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/decay_mechanism.json"
   },
   {
     "id": "L03",
-    "path": "research/exploratory_test_nll.json",
-    "sha256": "567d05c3663733969bb7a93fb5ba152e9429eef7158c3d4a85a32c56a54bdd3a",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/671699cc3ef8e4ca9ab7501796c3a7c46a63715364c44ab7b60d7e6068004bd2.json",
+    "sha256": "671699cc3ef8e4ca9ab7501796c3a7c46a63715364c44ab7b60d7e6068004bd2",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/exploratory_test_nll.json"
   },
   {
     "id": "L04",
-    "path": "research/rerun_comparison.json",
-    "sha256": "6b8490c4aac80f95a81cbab5ccf6ad2d6f807600dd47bd3fc57899fbc6c594cc",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/854b8386ee578935cb75039c99a5c102fc87972c6f8f153c06ad66a2c645181e.json",
+    "sha256": "854b8386ee578935cb75039c99a5c102fc87972c6f8f153c06ad66a2c645181e",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/rerun_comparison.json"
   },
   {
     "id": "L05",
-    "path": "research/record_verification.json",
-    "sha256": "c5119b7cf59849de80544ca4b86fe4c2143cc45c6eca55c6fc7fc1389c231ae7",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/7a902d2a0c199aad6d191dbe97514d4febc650dc7932a5cadd4c63abe5cd5a6c.json",
+    "sha256": "7a902d2a0c199aad6d191dbe97514d4febc650dc7932a5cadd4c63abe5cd5a6c",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/record_verification.json"
   },
   {
     "id": "L06",
-    "path": "results/rerun_from_scratch.log",
-    "sha256": "a55df151482d25aba705b599ee589b8da7faf7a8cb14ba21455928b899a3a3a5",
-    "analysis_kind": "exploratory"
+    "path": "cycles/001/research/evidence-snapshots/ac0e2a24beffb2bebef3ab15a257679749a0005f4aa838fe71677309c2ce9a56.log",
+    "sha256": "ac0e2a24beffb2bebef3ab15a257679749a0005f4aa838fe71677309c2ce9a56",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/results/rerun_from_scratch.log"
   },
   {
     "id": "L07",
-    "path": "research/checks.json",
+    "path": "cycles/001/research/evidence-snapshots/fe9567146cfffa9e136583be88dc1cca2086099fe5099d0771a4c82dbf9598ac.json",
     "sha256": "fe9567146cfffa9e136583be88dc1cca2086099fe5099d0771a4c82dbf9598ac",
-    "analysis_kind": "exploratory"
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/checks.json"
   },
   {
     "id": "L08",
-    "path": "study.py",
+    "path": "cycles/001/research/evidence-snapshots/34415a875e7f61954cf3813486f46a189d6b647f2e9682552d16db88a6d67d39.py",
     "sha256": "34415a875e7f61954cf3813486f46a189d6b647f2e9682552d16db88a6d67d39",
-    "analysis_kind": "exploratory"
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/study.py"
   },
   {
     "id": "L09",
-    "path": "tests/test_study.py",
+    "path": "cycles/001/research/evidence-snapshots/2d34288ca6eebf948b7be989f59b42c63b717996d4d8f2ccd626b71b634cd3b8.py",
     "sha256": "2d34288ca6eebf948b7be989f59b42c63b717996d4d8f2ccd626b71b634cd3b8",
-    "analysis_kind": "exploratory"
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/tests/test_study.py"
   },
   {
     "id": "L10",
-    "path": "research/protocol.json",
+    "path": "cycles/001/research/evidence-snapshots/5edcfb3fcda62035f6ea4013f88ebca59b7d75977f49d155af208a2bb50ec257.json",
     "sha256": "5edcfb3fcda62035f6ea4013f88ebca59b7d75977f49d155af208a2bb50ec257",
-    "analysis_kind": "not_applicable"
+    "analysis_kind": "not_applicable",
+    "original_path": "cycles/001/research/protocol.json"
+  },
+  {
+    "id": "L11",
+    "path": "cycles/001/research/evidence-snapshots/73928377674856b5edf0e17f3e1291f8d10c1208a6bed05cd2f3f7e7d4815a64.json",
+    "sha256": "73928377674856b5edf0e17f3e1291f8d10c1208a6bed05cd2f3f7e7d4815a64",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/mde_audit.json"
+  },
+  {
+    "id": "L12",
+    "path": "cycles/001/research/evidence-snapshots/c1e4d831df8260d6dd78c2d317808a4e3ab3d8a60117ef7d6bf606d280946769.log",
+    "sha256": "c1e4d831df8260d6dd78c2d317808a4e3ab3d8a60117ef7d6bf606d280946769",
+    "analysis_kind": "exploratory",
+    "original_path": "cycles/001/research/analysis_checks.log"
   }
 ]

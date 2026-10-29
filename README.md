@@ -19,7 +19,7 @@ The workflow follows [Neel Nanda's research stages](https://www.alignmentforum.o
 <!-- EUREKA:RESULTS:START -->
 ## Recorded results
 
-Recorded harness status: **budget_exhausted**; 5 operational phases accepted. Measurements below do not imply completion of unaccepted phases.
+Recorded harness status: **running**; 7 operational phases accepted. Measurements below do not imply completion of unaccepted phases.
 
 | Experiment | Method | Seed | Split | Accuracy | Seconds | Device |
 |---|---|---:|---|---:|---:|---|

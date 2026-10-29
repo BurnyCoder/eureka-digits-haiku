@@ -26,7 +26,7 @@
   {
     "id": "S04",
     "title": "PyTorch adam.py: decoupled weight decay update (torch 2.14.1 installed locally, plus upstream main)",
-    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adam.py",
     "summary": "Upstream adamw.py delegates to adam(..., decoupled_weight_decay=True) and its docstring gives theta <- theta - gamma*lambda*theta. Installed torch 2.14.1 at torch/optim/adam.py:419 executes 'param.mul_(1 - lr * weight_decay)' when decoupled_weight_decay is True. This is the per-step shrink used in the research.md arithmetic.",
     "license": "unknown (BSD-3-Clause expected for PyTorch; LICENSE file not fetched)",
     "accessed_at": "2026-10-29"

@@ -1,6 +1,6 @@
 # Reproducing cycle 001: AdamW weight decay on a fixed digits MLP
 
-Status at the core phase: the fixture (`study.py`) and the registered protocol are in place, and the core checks and unit tests pass. **No pilot, no training, and no test-split evaluation has been run yet.** Those steps belong to later phases and are only described here.
+Status: the pilot and the registered experiments have been run (see [`reports/experiments.md`](../reports/experiments.md) and [`reports/pilot.md`](../reports/pilot.md)). The commands below reproduce them; the results are in `results/` and `models/`. Phase-by-phase history is in `reports/`, and the registered definitions are in `reports/preregistration.md`.
 
 Scientific definitions live in [`reports/preregistration.md`](../reports/preregistration.md) and the immutable [`research/protocol.json`](../research/protocol.json) (SHA-256 recorded in [`research/registration.json`](../research/registration.json)). This document only explains how to run things.
 
@@ -28,8 +28,8 @@ PY=C:/Users/Happy/Documents/projects/auto-eureka-scientist-agent-harness/.venv/S
 
 $PY study.py check                 # fixture sanity: shapes, value range, split sizes (no training)
 $PY -m pytest tests -q             # core unit checks (~30 s CPU, writes only to pytest tmp dirs)
-$PY study.py pilot                 # regularized seed 0, VALIDATION split only (later phase)
-$PY study.py experiments           # all registered test-split arms (later phase; needs research/pilot-publication.json)
+$PY study.py pilot                 # regularized seed 0, validation metrics (reuses results/ if the hashes match)
+$PY study.py experiments           # all registered test-split arms (needs research/pilot-publication.json)
 ```
 
 `study.py` prints one timestamped JSON line per epoch and per saved experiment to stdout. It does not write a log file; redirect stdout (for example `... > logs/run.log`) to keep the record.
@@ -40,7 +40,7 @@ Outputs: `results/<id>.json` (one record per arm and seed, including `y_true`, `
 
 - 1797 images, 8x8 grayscale, 10 classes ([`load_digits`](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html)). Pixels are divided by the constant 16; nothing is learned from data during preprocessing.
 - Stratified 60/20/20 split with `train_test_split(..., stratify=y, random_state=42)` ([sklearn docs](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)): train 1078 / validation 359 / test 360.
-- The test split is touched only by `study.py experiments`. The pilot reads validation only.
+- Labels of the test split are used only in the registered comparisons (`study.py experiments`). Caveat: the fixture's reload check and prediction step run the model on all 1797 feature rows, including the 360 test features, in the pilot and in every arm. The pilot reports only validation metrics, but its code path does forward-pass test features. This is disclosed in E9 and `reports/pilot.md`; it is not a label leak, and it was not changed because `study.py` is the immutable fixture.
 - Limit: one random example split with no writer identity, so results do not measure generalization to new writers or datasets.
 
 ## Model and training (registered)

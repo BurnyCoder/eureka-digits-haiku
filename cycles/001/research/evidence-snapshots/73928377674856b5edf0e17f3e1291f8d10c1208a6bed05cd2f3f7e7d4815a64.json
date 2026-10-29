@@ -1,0 +1,44 @@
+{
+  "n_test": 360,
+  "z_sum": 2.801585,
+  "observed_discordance": 0.0,
+  "table": [
+    {
+      "discordance_fraction": 0.0,
+      "discordant_examples": 0.0,
+      "se_pp": 0.0,
+      "mde_pp": 0.0
+    },
+    {
+      "discordance_fraction": 0.01,
+      "discordant_examples": 3.6,
+      "se_pp": 0.527,
+      "mde_pp": 1.477
+    },
+    {
+      "discordance_fraction": 0.02,
+      "discordant_examples": 7.2,
+      "se_pp": 0.745,
+      "mde_pp": 2.088
+    },
+    {
+      "discordance_fraction": 0.03,
+      "discordant_examples": 10.8,
+      "se_pp": 0.913,
+      "mde_pp": 2.557
+    },
+    {
+      "discordance_fraction": 0.05,
+      "discordant_examples": 18.0,
+      "se_pp": 1.179,
+      "mde_pp": 3.302
+    },
+    {
+      "discordance_fraction": 0.1,
+      "discordant_examples": 36.0,
+      "se_pp": 1.667,
+      "mde_pp": 4.669
+    }
+  ],
+  "note": "MDE is 0 only because the observed discordance is 0; it is not evidence of equivalence."
+}
