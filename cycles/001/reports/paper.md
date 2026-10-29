@@ -11,6 +11,8 @@ This report records a bounded research cycle executed through Claude Code. The m
 
 Recorded harness status: **budget_exhausted**; 5 operational phases accepted. Measurements below do not imply completion of unaccepted phases.
 
+Post-run repairs or publication work are documented in the [audit disclosure](https://github.com/BurnyCoder/eureka-digits-haiku/blob/main/reports/post-run-publication.md). They are separate from the bounded model execution.
+
 # Context, motivation, and introduction
 
 Does AdamW weight decay improve held-out accuracy of a small MLP on the bundled digits data?
