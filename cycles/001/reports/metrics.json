@@ -1,0 +1,21 @@
+{
+  "experiments": [
+    {
+      "id": "pilot_regularized_s0",
+      "method": "regularized",
+      "seed": 0,
+      "split": "validation",
+      "analysis_kind": "exploratory",
+      "accuracy": 0.9665738161559888,
+      "seconds": 6.805040200008079,
+      "device": "cuda",
+      "checkpoint": "models/regularized-s0.safetensors",
+      "checkpoint_reload_verified": true
+    }
+  ],
+  "primary": null,
+  "limitations": [
+    "Conditional test-example intervals do not estimate variation over new training seeds, writers, or datasets.",
+    "A small single-task study does not establish general model or harness superiority."
+  ]
+}
