@@ -1,0 +1,130 @@
+{
+  "S01": {
+    "url": "https://arxiv.org/abs/1711.05101",
+    "final_url": "https://arxiv.org/abs/1711.05101",
+    "ok": true,
+    "at": "2026-10-29T17:56:04.468+00:00",
+    "sha256": "e2402d8869fa233343b46661f47048b352b804d0c3e834fc83bb9bb2810377c8",
+    "sample_bytes": 43412
+  },
+  "S02": {
+    "url": "https://arxiv.org/abs/1412.6980",
+    "final_url": "https://arxiv.org/abs/1412.6980",
+    "ok": true,
+    "at": "2026-10-29T17:56:04.574+00:00",
+    "sha256": "06780135d1ea4dfb313b58b395a19eeb9a372e1e672b37752cd56c152b7d7d02",
+    "sample_bytes": 43830
+  },
+  "S03": {
+    "url": "https://docs.pytorch.org/docs/2.15/generated/torch.optim.AdamW.html",
+    "final_url": "https://docs.pytorch.org/docs/2.15/generated/torch.optim.AdamW.html",
+    "ok": true,
+    "at": "2026-10-29T17:56:04.984+00:00",
+    "sha256": "46e0fdff8b44b36e71b1344495abd1f0b938bf13121ec72f2dd4045edafc694a",
+    "sample_bytes": 280396
+  },
+  "S04": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
+    "final_url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
+    "ok": true,
+    "at": "2026-10-29T17:56:05.412+00:00",
+    "sha256": "b9cbfb1e2112b61d7aa88b0f8e2a777ddae9cca5e348e231256f1e39f06f1d92",
+    "sample_bytes": 7535
+  },
+  "S05": {
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html",
+    "final_url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html",
+    "ok": true,
+    "at": "2026-10-29T17:56:05.661+00:00",
+    "sha256": "4fd1b457c1af7eff41cca4d63c93c1a14e49fa29e9ba4d771426aa6759c42b9b",
+    "sample_bytes": 135574
+  },
+  "S06": {
+    "url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits",
+    "final_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits",
+    "ok": true,
+    "at": "2026-10-29T17:56:06.866+00:00",
+    "sha256": "24f8083702dd44d46393478f24d01241a41b72e81ad6b6bf74ccdc86e55bbb30",
+    "sample_bytes": 131723
+  },
+  "S07": {
+    "url": "https://arxiv.org/abs/1611.03530",
+    "final_url": "https://arxiv.org/abs/1611.03530",
+    "ok": true,
+    "at": "2026-10-29T17:56:06.944+00:00",
+    "sha256": "1f2201b5201edd452306991ed5cc0936a5b545317310af74960903bb156074e6",
+    "sample_bytes": 44128
+  },
+  "S08": {
+    "url": "https://papers.nips.cc/paper/1991/hash/8eefcfdf5990e441f0fb6f3fad709e21-Abstract.html",
+    "final_url": "https://papers.nips.cc/paper/1991/hash/8eefcfdf5990e441f0fb6f3fad709e21-Abstract.html",
+    "ok": true,
+    "at": "2026-10-29T17:56:07.796+00:00",
+    "sha256": "42c28c122fc70c0aef2edc66d5dd24f57b44c65152f2391a6fd151dac94d3b9c",
+    "sample_bytes": 8683
+  },
+  "S09": {
+    "url": "https://consensus.app/papers/details/cfe1ea949a105c5f953b251b2af3701e/",
+    "final_url": "https://consensus.app/sign-up/?redirect_url=%2Fpapers%2Fdetails%2Fcfe1ea949a105c5f953b251b2af3701e%2F",
+    "ok": true,
+    "at": "2026-10-29T17:56:08.508+00:00",
+    "sha256": "0c85db5c31d82ce29aedde6a122e5c916891e252dcb625a6f122fe065e2d64e0",
+    "sample_bytes": 11585
+  },
+  "S10": {
+    "url": "https://consensus.app/papers/details/c179f549f272597888e9890895eef7f1/",
+    "final_url": "https://consensus.app/sign-up/?redirect_url=%2Fpapers%2Fdetails%2Fc179f549f272597888e9890895eef7f1%2F",
+    "ok": true,
+    "at": "2026-10-29T17:56:09.192+00:00",
+    "sha256": "dd4a106fc0762c8335064bdee37da706a214622fbcbd02afee32fa0421ca798c",
+    "sample_bytes": 11585
+  },
+  "S11": {
+    "url": "https://arxiv.org/abs/1807.03341",
+    "final_url": "https://arxiv.org/abs/1807.03341",
+    "ok": true,
+    "at": "2026-10-29T17:56:09.273+00:00",
+    "sha256": "a9f18f292d2d537cbd39b3ed17d228e05f6b69c10b62191e35be0269df026521",
+    "sample_bytes": 44040
+  },
+  "S12": {
+    "url": "https://arxiv.org/abs/2108.02497",
+    "final_url": "https://arxiv.org/abs/2108.02497",
+    "ok": true,
+    "at": "2026-10-29T17:56:09.350+00:00",
+    "sha256": "addd3c3fa05a333656638b639055d4fd3908d4db21bb158fe3c001dfdfdef52e",
+    "sample_bytes": 43498
+  },
+  "S13": {
+    "url": "https://www.alignmentforum.org/s/5GT3yoYM9gRmMEKqL",
+    "final_url": "https://www.alignmentforum.org/s/5GT3yoYM9gRmMEKqL",
+    "ok": true,
+    "at": "2026-10-29T17:56:09.850+00:00",
+    "sha256": "bcf78c795d9022a9db79d312d6958412e8d093af059a27b020dd5a4b5558da98",
+    "sample_bytes": 203173
+  },
+  "S14": {
+    "url": "https://www.greaterwrong.com/posts/hjMy4ZxS5ogA9cTYK/how-i-think-about-my-research-process-explore-understand",
+    "final_url": "https://www.greaterwrong.com/posts/hjMy4ZxS5ogA9cTYK/how-i-think-about-my-research-process-explore-understand",
+    "ok": true,
+    "at": "2026-10-29T17:56:10.728+00:00",
+    "sha256": "0f3af2821f2d098ebc5e50446d1500cc4352a8f5bcc3bb083dca1ce96cc65d3f",
+    "sample_bytes": 44399
+  },
+  "S15": {
+    "url": "https://arxiv.org/abs/1807.03582",
+    "final_url": "https://arxiv.org/abs/1807.03582",
+    "ok": true,
+    "at": "2026-10-29T17:56:10.810+00:00",
+    "sha256": "218257c25c7583dcad6a6fb0dd99f962d463f21db73a735ea10cd3b286a354b7",
+    "sample_bytes": 40462
+  },
+  "S16": {
+    "url": "https://huggingface.co/docs/safetensors/en/api/torch",
+    "final_url": "https://huggingface.co/docs/safetensors/en/api/torch",
+    "ok": true,
+    "at": "2026-10-29T17:56:11.099+00:00",
+    "sha256": "5d1ec0bd3af5d001cc9779de749781ba32c781c94b28890d970b0c9a1378cdaa",
+    "sample_bytes": 145867
+  }
+}
