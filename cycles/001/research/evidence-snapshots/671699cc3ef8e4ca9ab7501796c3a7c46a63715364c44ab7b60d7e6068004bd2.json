@@ -1,0 +1,34 @@
+{
+  "metric": "mean test NLL, decay 0.01 minus decay 0 (negative = decay lowers loss)",
+  "per_seed": {
+    "seed0": {
+      "nll_regularized": 0.12493214011192322,
+      "nll_unregularized": 0.12453483045101166,
+      "delta": 0.0003973163547925651,
+      "paired_sd_per_example": 0.0032408370170742273,
+      "mean_top_prob_regularized": 0.9345036745071411,
+      "mean_top_prob_unregularized": 0.9351292848587036
+    },
+    "seed1": {
+      "nll_regularized": 0.12463890016078949,
+      "nll_unregularized": 0.12416063994169235,
+      "delta": 0.0004782393516507,
+      "paired_sd_per_example": 0.002038423903286457,
+      "mean_top_prob_regularized": 0.9337685704231262,
+      "mean_top_prob_unregularized": 0.9343464970588684
+    },
+    "seed2": {
+      "nll_regularized": 0.12835824489593506,
+      "nll_unregularized": 0.1277839094400406,
+      "delta": 0.0005743497749790549,
+      "paired_sd_per_example": 0.0019115656614303589,
+      "mean_top_prob_regularized": 0.9296379685401917,
+      "mean_top_prob_unregularized": 0.9302612543106079
+    }
+  },
+  "mean_delta": 0.0004833018174394965,
+  "ci95_conditional": [
+    0.00023958949459483846,
+    0.0006968182788114063
+  ]
+}

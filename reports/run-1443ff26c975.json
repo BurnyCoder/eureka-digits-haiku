@@ -2,13 +2,54 @@
   "id": "1443ff26c975",
   "backend": "claude",
   "requested_model": "haiku",
-  "status": "budget_exhausted",
-  "message": "budget_exhausted",
-  "calls": 17,
-  "active_seconds": 3600.1455705000553,
+  "status": "running",
+  "message": "",
+  "calls": 20,
+  "active_seconds": 4311.883461400052,
   "limits": {
-    "minutes": 60.0,
-    "calls": 20
+    "minutes": 180.0,
+    "calls": 60
+  },
+  "configuration_history": {
+    "changes": [
+      {
+        "at": "2026-10-29T20:42:27.950+00:00",
+        "previous": {
+          "project": "C:\\Users\\Happy\\Documents\\projects\\auto-eureka-scientist-agent-harness\\workspaces\\eureka-digits-haiku",
+          "backend": "claude",
+          "model": "haiku",
+          "mode": "cycle",
+          "max_minutes": 60.0,
+          "max_calls": 20,
+          "max_cycles": null,
+          "profile": "digits",
+          "publish": true,
+          "owner": "BurnyCoder",
+          "repository": "",
+          "executable": "",
+          "reasoning": "high"
+        },
+        "updated": {
+          "project": "C:\\Users\\Happy\\Documents\\projects\\auto-eureka-scientist-agent-harness\\workspaces\\eureka-digits-haiku",
+          "backend": "claude",
+          "model": "haiku",
+          "mode": "cycle",
+          "max_minutes": 180.0,
+          "max_calls": 60,
+          "max_cycles": null,
+          "profile": "digits",
+          "publish": true,
+          "owner": "BurnyCoder",
+          "repository": "",
+          "executable": "",
+          "reasoning": "high",
+          "hf_collection": "BurnyCoder/auto-eureka-scientist-6ae3ae37b267f00aef999f75"
+        },
+        "calls": 17,
+        "active_seconds": 3600.1455705000553,
+        "previous_status": "budget_exhausted"
+      }
+    ]
   },
   "policy_sha256": "6a9addc31e8fe730400c32e935c1a62fc7b9f12b615a997f84c0e6025cd3e922",
   "completed_phases": [
@@ -16,7 +57,9 @@
     "preregister",
     "core",
     "pilot",
-    "experiments"
+    "experiments",
+    "analysis",
+    "review"
   ],
   "attempts": [
     {
@@ -1048,6 +1091,207 @@
       "models": [],
       "model_identity_status": null,
       "usage": {},
+      "searched": false
+    },
+    {
+      "id": 18,
+      "cycle": 1,
+      "phase": "analysis",
+      "status": "accepted",
+      "started": "2026-10-29T20:42:27.963+00:00",
+      "ended": "2026-10-29T20:48:08.694+00:00",
+      "prompt_sha256": "a901d37e5878c88fe6395a841da2c1ee32abae0d8a5dbd70fc34c7a61e074bd3",
+      "models": [
+        "claude-haiku-5-5"
+      ],
+      "model_identity_status": "reported",
+      "usage": {
+        "input_tokens": 56,
+        "cache_creation_input_tokens": 139504,
+        "cache_read_input_tokens": 2945573,
+        "output_tokens": 47370,
+        "output_tokens_details": {
+          "thinking_tokens": 24501
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 139504,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3139,
+            "cache_read_input_tokens": 138068,
+            "cache_creation_input_tokens": 1436,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1436
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null,
+        "model_usage": {
+          "claude-haiku-5-5": {
+            "inputTokens": 56,
+            "outputTokens": 47370,
+            "cacheReadInputTokens": 2945573,
+            "cacheCreationInputTokens": 139504,
+            "webSearchRequests": 0,
+            "costUSD": 0.25712481,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 24501,
+            "cacheCreationEphemeral5mInputTokens": 0,
+            "cacheCreationEphemeral1hInputTokens": 139504,
+            "canonicalModel": "claude-haiku-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        },
+        "reported_cost_usd": 0.25712481
+      },
+      "searched": false
+    },
+    {
+      "id": 19,
+      "cycle": 1,
+      "phase": "review",
+      "status": "accepted",
+      "started": "2026-10-29T20:48:17.350+00:00",
+      "ended": "2026-10-29T20:53:27.296+00:00",
+      "prompt_sha256": "e5c60a49a3abc3d9dfdcf9b52bb26ef13e760e0834dd0c311b366d69ca4e02d9",
+      "models": [
+        "claude-haiku-5-5"
+      ],
+      "model_identity_status": "reported",
+      "usage": {
+        "input_tokens": 40,
+        "cache_creation_input_tokens": 129123,
+        "cache_read_input_tokens": 2277909,
+        "output_tokens": 31614,
+        "output_tokens_details": {
+          "thinking_tokens": 17470
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 129123,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2169,
+            "cache_read_input_tokens": 144721,
+            "cache_creation_input_tokens": 609,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 609
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null,
+        "model_usage": {
+          "claude-haiku-5-5": {
+            "inputTokens": 16679,
+            "outputTokens": 33596,
+            "cacheReadInputTokens": 2277909,
+            "cacheCreationInputTokens": 129123,
+            "webSearchRequests": 0,
+            "costUSD": 0.25677835000000004,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 18913,
+            "cacheCreationEphemeral5mInputTokens": 0,
+            "cacheCreationEphemeral1hInputTokens": 129123,
+            "canonicalModel": "claude-haiku-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        },
+        "reported_cost_usd": 0.25677835000000004
+      },
+      "searched": true
+    },
+    {
+      "id": 20,
+      "cycle": 1,
+      "phase": "publish",
+      "status": "accepted",
+      "started": "2026-10-29T20:53:27.482+00:00",
+      "ended": "2026-10-29T20:54:20.276+00:00",
+      "prompt_sha256": "3f3ac0e19e659f86e62b1fad41d33aa760e8cf5b4ebedf32af6359ba648c8dd0",
+      "models": [
+        "claude-haiku-5-5"
+      ],
+      "model_identity_status": "reported",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 70341,
+        "cache_read_input_tokens": 294656,
+        "output_tokens": 9734,
+        "output_tokens_details": {
+          "thinking_tokens": 1257
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 70341,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2367,
+            "cache_read_input_tokens": 85895,
+            "cache_creation_input_tokens": 653,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 653
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null,
+        "model_usage": {
+          "claude-haiku-5-5": {
+            "inputTokens": 10,
+            "outputTokens": 9734,
+            "cacheReadInputTokens": 294656,
+            "cacheCreationInputTokens": 70341,
+            "webSearchRequests": 0,
+            "costUSD": 0.02188276,
+            "contextWindow": 1000000,
+            "maxOutputTokens": 128000,
+            "thinkingTokens": 1257,
+            "cacheCreationEphemeral5mInputTokens": 0,
+            "cacheCreationEphemeral1hInputTokens": 70341,
+            "canonicalModel": "claude-haiku-5-5",
+            "provider": "firstParty",
+            "costBasis": "list"
+          }
+        },
+        "reported_cost_usd": 0.02188276
+      },
       "searched": false
     }
   ]

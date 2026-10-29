@@ -1,13 +1,151 @@
 [
-  {"id": "C1", "text": "Registered primary comparison: adding AdamW decoupled weight decay (0.01) to the fixed ReLU MLP does not change test accuracy relative to decay 0. Across seeds 0-2 the two arms make identical argmax predictions on all 360 test examples, so the paired difference is exactly zero and the bootstrap interval is degenerate.", "analysis_kind": "confirmatory", "evidence": ["regularized_s0", "regularized_s1", "regularized_s2", "unregularized_s0", "unregularized_s1", "unregularized_s2"], "limitations": "Test-set argmax identity at n=360 with three seeds only. Zero discordant pairs gives no sign information, so this shows the intervention is too small to flip a prediction here, not that decay is equivalent to no decay. Only the registered decay value and budget were tested."},
-  {"id": "C2", "text": "The registered sensitivity arm (weight decay 0.001) also yields test predictions identical to the unregularized arm on all seeds, so the accuracy effect is null across both tested non-zero decay values.", "analysis_kind": "confirmatory", "evidence": ["sensitivity_s0", "sensitivity_s1", "sensitivity_s2", "unregularized_s0", "unregularized_s1", "unregularized_s2"], "limitations": "Only two non-zero decay values were tested, both under the same learning rate and 850-step budget. No claim about larger decay or longer training."},
-  {"id": "C3", "text": "The shuffled-label control reaches near-chance test accuracy on every seed, so the test pipeline does not recover labels that are unrelated to the inputs.", "analysis_kind": "confirmatory", "evidence": ["shuffled_labels_s0", "shuffled_labels_s1", "shuffled_labels_s2"], "limitations": "Negative control for label leakage at one training budget. It does not test memorisation under longer training. The shuffled arm is not paired with an undecayed shuffled arm, so it does not isolate decay."},
-  {"id": "C4", "text": "The stored test predictions and accuracies are reproducible: accuracy recomputed from stored predictions matches the records, and an independent from-scratch retrain reproduces all arm records on checkpoint hash, predictions, IDs, accuracy and loss history.", "analysis_kind": "exploratory", "evidence": ["L04", "L05", "L06"], "limitations": "Post-hoc audit performed after the registered comparison, so it is exploratory by the protocol rules. Reproduction holds on this machine and CUDA build only."},
-  {"id": "C5", "text": "Baselines on the test split: a logistic regression reaches an accuracy close to, but below, the MLP arms, and the class-prior floor is near chance. The task is learnable by a linear model, and the MLP is not operating at a trivial level.", "analysis_kind": "confirmatory", "evidence": ["logistic_s0", "class_prior_s0"], "limitations": "The logistic baseline has a single seed and was not tuned under a separate protocol. The difference from the MLP is descriptive, not a tested hypothesis."},
-  {"id": "E1", "text": "Decay does change the optimisation trajectory: train and validation loss histories differ from the unregularized arm by a small but non-zero amount at every seed, even though test predictions are identical.", "analysis_kind": "exploratory", "evidence": ["L01", "regularized_s0", "unregularized_s0"], "limitations": "Derived from a summary file, not a registered endpoint. Loss differences are continuous and depend on the single fixed learning rate."},
-  {"id": "E2", "text": "The decoupled decay shrinks weights in the direction the update rule predicts, by a small amount relative to the weight norm over the 850-step run. This is the mechanistic reason C1 is near-null under the registered constants.", "analysis_kind": "exploratory", "evidence": ["L02", "L08", "L10"], "limitations": "Weight-level analysis of one trained configuration per arm. The predicted shrink follows from the update formula and the registered constants, not from an intervention on the decay term alone."},
-  {"id": "E3", "text": "This design can only resolve accuracy differences above a minimum detectable effect set by the test size (n=360) and the seed-to-seed spread. Smaller effects are inconclusive here, and an inconclusive primary interval is the expected outcome for a near-null intervention.", "analysis_kind": "exploratory", "evidence": ["pilot_regularized_s0", "L01", "L10"], "limitations": "The minimum-detectable-effect figure was computed in the research phase from binomial standard errors and the observed seed spread, not from a registered power analysis. It is an approximation."},
-  {"id": "E4", "text": "Post hoc, the decay arm has a slightly higher test negative log-likelihood than the unregularized arm, with a bootstrap interval that excludes zero. The continuous metric shows a small effect where accuracy shows none.", "analysis_kind": "exploratory", "evidence": ["L03"], "limitations": "Not a registered endpoint and chosen after the primary result was known, so it cannot be promoted to confirmatory. Direction and size need a pre-registered continuous endpoint in a new cycle."},
-  {"id": "E5", "text": "The implementation passes its checks: the decoupled-decay step is verified with a zero-gradient test, and `study.py check` split sizes match the registered fixture.", "analysis_kind": "exploratory", "evidence": ["L09", "L07", "L08"], "limitations": "Checks cover the properties tested, not the full training loop. The shuffled-label permutation is only indirectly checked through C3."},
-  {"id": "E6", "text": "Code audit: the fixture's reload check and prediction step run eval-mode forward passes on test features, so the test split is not used only for final metrics. No test label was found in the training or model-selection paths read.", "analysis_kind": "exploratory", "evidence": ["L08"], "limitations": "Found by reading the code, not by a runtime leakage test. Disclosed in reports/pilot.md and not fixed in this cycle, because study.py is the immutable fixture."}
+  {
+    "id": "C1",
+    "text": "Registered primary hypothesis H1 (AdamW decay 0.01 improves test accuracy over decay 0) is not supported. The mean paired accuracy difference is zero, and the paired bootstrap interval is degenerate at [0, 0] because regularized and unregularized arms make identical argmax predictions on all 360 test examples for seeds 0-2. The registered falsification rule (interval wholly below zero) is not triggered, and the directional support rule (interval wholly above zero) is not met. Predictions P1 (|mean delta| <= 1 pp) and P2 (interval includes zero) hold; P3 (interval wholly above zero) is not observed.",
+    "analysis_kind": "confirmatory",
+    "evidence": [
+      "regularized_s0",
+      "regularized_s1",
+      "regularized_s2",
+      "unregularized_s0",
+      "unregularized_s1",
+      "unregularized_s2"
+    ],
+    "limitations": "Zero discordant pairs carry no sign information, so this shows that the registered intervention did not flip any test prediction at this budget. It does not show that decay is equivalent to no decay. Only decay 0.01, learning rate 0.001, 850 steps, three seeds and one random split were tested. The bootstrap conditions on the trained models and does not capture training-seed variance."
+  },
+  {
+    "id": "C2",
+    "analysis_kind": "confirmatory",
+    "text": "Two registered checks pass on the confirmatory arms. P8: regularized and unregularized per-epoch loss histories differ for every seed, so decay is applied. P7: the seed-to-seed SD of test accuracy is 0.32 pp, inside the registered 0.3-1.5 pp range at its lower edge, and comparable to the zero mean difference of C1.",
+    "evidence": [
+      "regularized_s0",
+      "regularized_s1",
+      "regularized_s2",
+      "unregularized_s0",
+      "unregularized_s1",
+      "unregularized_s2"
+    ],
+    "limitations": "P7 sits at the registered lower bound, and three seeds estimate seed variance poorly. P8 shows that decay changes training, not that the implementation matches the update rule; that is checked separately by the zero-gradient unit test (E8) and the mechanism analysis (E5)."
+  },
+  {
+    "id": "E1",
+    "text": "The sensitivity arm (decay 0.001) makes test predictions identical to the unregularized arm on all seeds, so the accuracy result is null for both non-zero decay values tested.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "sensitivity_s0",
+      "sensitivity_s1",
+      "sensitivity_s2",
+      "unregularized_s0",
+      "unregularized_s1",
+      "unregularized_s2"
+    ],
+    "limitations": "Descriptive comparison, not a registered primary endpoint. Both non-zero values share the same learning rate and 850-step budget. Nothing is claimed about larger decay or longer training."
+  },
+  {
+    "id": "E2",
+    "text": "The logistic regression baseline reaches test accuracy slightly below the MLP arms, and the class-prior floor sits at chance. The task is learnable by a linear model at roughly the same level, so the MLP is not operating at a trivial level.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "logistic_s0",
+      "class_prior_s0",
+      "regularized_s0",
+      "regularized_s1",
+      "regularized_s2"
+    ],
+    "limitations": "The logistic baseline has one seed and was not tuned under a separate protocol. Its L2 penalty is sklearn's default, not the registered decay. The difference from the MLP is descriptive."
+  },
+  {
+    "id": "E3",
+    "text": "Decay changes the optimisation trajectory. Train and validation loss histories differ from the unregularized arm at every seed, even though test predictions are identical.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L01",
+      "regularized_s0",
+      "unregularized_s0"
+    ],
+    "limitations": "Derived from the experiment summary, not a registered endpoint. The size of the difference depends on the single fixed learning rate and budget."
+  },
+  {
+    "id": "E4",
+    "text": "Reproducibility audits pass. Accuracy recomputed from stored predictions matches every record, and an independent from-scratch retrain reproduces all arm records on checkpoint hash, predictions, example IDs, accuracy and loss history.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L04",
+      "L05",
+      "L06"
+    ],
+    "limitations": "Post-hoc audit run after the registered comparison, so it is exploratory by the protocol rules. Reproduction was checked on this machine and CUDA build only."
+  },
+  {
+    "id": "E5",
+    "text": "Weight-level mechanism: decay shrinks the weights, and the shrink is smaller than the pure-decay prediction. Predicted cumulative shrink from the decoupled update is about 0.85 percent for decay 0.01 (factor 0.99154), but the measured norm ratio of regularized to unregularized checkpoints is 0.9959 on every seed. The observed shrink is about half the prediction, and the cause is not identified. Candidate explanations are that the two arms follow different gradient trajectories, so their norms also differ for reasons other than decay, and that the norm is taken over all parameters. This explains why the registered intervention is near-null, but only at the level of magnitude.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L02",
+      "regularized_s0",
+      "unregularized_s0",
+      "regularized_s1",
+      "unregularized_s1",
+      "regularized_s2",
+      "unregularized_s2"
+    ],
+    "limitations": "Derived after the results were known, from one checkpoint per arm per seed. The predicted shrink follows from the update rule and the constants, but the measured shrink is not a clean single-variable intervention. The discrepancy is recorded, not resolved."
+  },
+  {
+    "id": "E6",
+    "text": "Design sensitivity: the registered paired design can resolve a difference of about 2.5 pp only if roughly 3 percent of test examples are discordant between arms (about 11 of 360). Because the observed discordance is zero, the minimum detectable effect cannot be estimated from data. Effects smaller than about 2.5 pp would mostly be inconclusive.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L11",
+      "pilot_regularized_s0"
+    ],
+    "limitations": "The minimum-detectable-effect formula uses a normal approximation to the paired-discordance variance. The 2.5 pp figure is the research-phase value and corresponds to an assumed discordance, not a measured one."
+  },
+  {
+    "id": "E7",
+    "text": "Post hoc, the decay arm has a slightly higher mean test negative log-likelihood than the unregularized arm on all three seeds, and the conditional bootstrap interval excludes zero. This is the only continuous signal in the study, and its direction is opposite to the hypothesis.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L03"
+    ],
+    "limitations": "Not a registered endpoint and chosen after the primary result was known, so it cannot be promoted to confirmatory. The bootstrap is conditional on the trained models. Three of three seeds with the same sign has two-sided sign-test p = 0.25, so consistency across seeds is weak evidence. A pre-registered continuous endpoint in a new cycle is needed."
+  },
+  {
+    "id": "E8",
+    "text": "Implementation checks pass: study.py check reproduces the registered split sizes, and the 13-test pytest suite passes. The decoupled-decay step is covered by a zero-gradient test.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L07",
+      "L09",
+      "L12"
+    ],
+    "limitations": "The checks cover the properties tested, not the full training loop. The shuffled-label permutation is checked only through C2."
+  },
+  {
+    "id": "E9",
+    "text": "Code audit: the fixture's reload check and prediction step run eval-mode forward passes on all 1797 feature rows, which include the 360 test features (the pilot's code path does this too, although the pilot reports validation metrics only). No test label was found in the training or model-selection paths that were read.",
+    "analysis_kind": "exploratory",
+    "evidence": [
+      "L08"
+    ],
+    "limitations": "Found by reading the code, not by a runtime leakage test. Disclosed in reports/pilot.md. Not fixed in this cycle, because study.py is the immutable fixture. Read-only audit, so 'no label found' is not proof of absence."
+  },
+  {
+    "id": "E10",
+    "analysis_kind": "exploratory",
+    "text": "Other registered prediction checks pass on arms that study.py labels exploratory. P4: pilot validation accuracy and the logistic and real-label MLP test accuracies lie in the registered ranges. P5: shuffled-label test accuracy is near chance, within the registered 0.05-0.16 range and below the 0.20 failure threshold. P6: class-prior test accuracy equals the majority-class fraction of the test split exactly. A4(d): accuracy recomputed from stored predictions matches the records.",
+    "evidence": [
+      "pilot_regularized_s0",
+      "shuffled_labels_s0",
+      "shuffled_labels_s1",
+      "shuffled_labels_s2",
+      "logistic_s0",
+      "class_prior_s0",
+      "regularized_s0",
+      "regularized_s1",
+      "regularized_s2",
+      "L05"
+    ],
+    "limitations": "The predictions were registered, but these arms are labelled exploratory by the fixture, so the outcomes are reported under that label. The shuffled arm uses the same decay as the regularized arm, so P5 does not isolate decay. Accuracy near chance cannot detect every label-permutation bug. The class-prior and logistic results come from one seed each."
+  }
 ]

@@ -1,0 +1,6 @@
+# analysis-phase checks (captured 2026-10-29T20:44:33Z)
+$ study.py check
+{"status": "passed", "dataset_shape": [1797, 64], "split_sizes": {"train": 1078, "validation": 359, "test": 360}}
+$ pytest -q tests
+.............                                                            [100%]
+13 passed in 17.70s
