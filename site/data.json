@@ -212,7 +212,7 @@
     "status": "complete",
     "message": "All required phases completed",
     "calls": 20,
-    "active_seconds": 4347.981194200052,
+    "active_seconds": 4368.261031400005,
     "limits": {
       "minutes": 180.0,
       "calls": 60
@@ -48574,7 +48574,7 @@
     {
       "id": "S09",
       "title": "Understanding Decoupled and Early Weight Decay, Bjorck et al., 2020",
-      "url": "https://consensus.app/papers/details/cfe1ea949a105c5f953b251b2af3701e/",
+      "url": "https://arxiv.org/abs/2012.13841",
       "summary": "Reports that decoupled weight decay mainly fixes the mixing of the L2 term into Adam's first-moment buffer, and that applying decay only early in training can regularize. Read from the search-index abstract only; the full text was not read. Shows that the decoupled-vs-L2 difference is a known active question, not a settled one.",
       "license": "unknown",
       "accessed_at": "2026-10-29"
@@ -48582,7 +48582,7 @@
     {
       "id": "S10",
       "title": "Towards Understanding Convergence and Generalization of AdamW, Zhou et al., IEEE TPAMI 2024",
-      "url": "https://consensus.app/papers/details/c179f549f272597888e9890895eef7f1/",
+      "url": "https://panzhous.github.io/assets/pdf/2024-TPAMI-AdamW.pdf",
       "summary": "Claims AdamW minimizes a dynamically regularized loss and has smaller generalization error than Adam and L2-Adam from a Bayesian posterior view. Read from the abstract only; theory not checked and no empirical claims relied upon.",
       "license": "unknown",
       "accessed_at": "2026-10-29"
@@ -48670,7 +48670,7 @@
     {
       "id": "C2",
       "analysis_kind": "confirmatory",
-      "text": "Two registered checks pass on the confirmatory arms. P8: regularized and unregularized per-epoch loss histories differ for every seed, so decay is applied. P7: the seed-to-seed SD of test accuracy is 0.32 pp, inside the registered 0.3-1.5 pp range at its lower edge, and comparable to the zero mean difference of C1.",
+      "text": "The registered arms have different loss histories for each seed, consistent with the intervention changing training. The observed seed spread falls within the preregistered range. These checks do not independently prove that the entire optimizer implementation is correct; numerical values are regenerated in the result tables.",
       "evidence": [
         "regularized_s0",
         "regularized_s1",
@@ -48732,7 +48732,7 @@
     },
     {
       "id": "E5",
-      "text": "Weight-level mechanism: decay shrinks the weights, and the shrink is smaller than the pure-decay prediction. Predicted cumulative shrink from the decoupled update is about 0.85 percent for decay 0.01 (factor 0.99154), but the measured norm ratio of regularized to unregularized checkpoints is 0.9959 on every seed. The observed shrink is about half the prediction, and the cause is not identified. Candidate explanations are that the two arms follow different gradient trajectories, so their norms also differ for reasons other than decay, and that the norm is taken over all parameters. This explains why the registered intervention is near-null, but only at the level of magnitude.",
+      "text": "The checkpoint norm comparison differs from the hypothetical repeated pure-decay multiplier. The fitted arms also follow different gradient trajectories, so their norm ratio is not a measurement of isolated decay. This descriptive comparison does not establish why test predictions coincide or identify a mechanism for the accuracy result.",
       "analysis_kind": "exploratory",
       "evidence": [
         "L02",
@@ -48747,17 +48747,17 @@
     },
     {
       "id": "E6",
-      "text": "Design sensitivity: the registered paired design can resolve a difference of about 2.5 pp only if roughly 3 percent of test examples are discordant between arms (about 11 of 360). Because the observed discordance is zero, the minimum detectable effect cannot be estimated from data. Effects smaller than about 2.5 pp would mostly be inconclusive.",
+      "text": "The sensitivity audit tabulates normal-approximation calculations under assumed discordance rates. These are planning scenarios, not an empirical detection threshold. Observed agreement does not establish the population discordance rate, equivalence, or a hard lower bound on detectable effects.",
       "analysis_kind": "exploratory",
       "evidence": [
         "L11",
         "pilot_regularized_s0"
       ],
-      "limitations": "The minimum-detectable-effect formula uses a normal approximation to the paired-discordance variance. The 2.5 pp figure is the research-phase value and corresponds to an assumed discordance, not a measured one."
+      "limitations": "The calculation assumes a discordance rate and a normal approximation. It is not a power analysis for every alternative or for the correlated multi-seed estimator, and it does not establish that smaller effects must be inconclusive."
     },
     {
       "id": "E7",
-      "text": "Post hoc, the decay arm has a slightly higher mean test negative log-likelihood than the unregularized arm on all three seeds, and the conditional bootstrap interval excludes zero. This is the only continuous signal in the study, and its direction is opposite to the hypothesis.",
+      "text": "The saved post-hoc negative-log-likelihood analysis reports higher loss with decay and a conditional interval excluding zero. This is a distinct exploratory endpoint. It does not test the registered accuracy hypothesis, and other continuous measurements, including validation loss, also changed.",
       "analysis_kind": "exploratory",
       "evidence": [
         "L03"

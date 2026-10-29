@@ -21,16 +21,16 @@ Decoupled weight decay (AdamW, `S01`) is a standard regulariser for MLPs. The qu
 
 ## 4. Confirmatory results
 - **C1 (primary, H1).** Not supported. The mean paired difference is zero and the bootstrap interval is degenerate at zero, because the arms make identical test predictions for every seed (`regularized_s0..2`, `unregularized_s0..2`, `L01`). The falsification rule is not triggered, since the interval is not wholly below zero, but the directional prediction is not observed. Predictions P1 and P2 hold; P3 does not (`reports/preregistration.md`).
-- **C2 (registered checks, confirmatory arms).** Decay is applied: the per-epoch loss histories differ from the unregularized arm for every seed (P8, `regularized_s0..2`, `unregularized_s0..2`). The seed-to-seed SD of test accuracy is 0.32 pp, inside the registered 0.3-1.5 pp range at its lower edge (P7, same records). Three seeds estimate this spread poorly.
+- **C2 (registered checks, confirmatory arms).** The loss histories differ across arms, consistent with the intervention changing training (P8, `regularized_s0..2`, `unregularized_s0..2`). Seed spread falls within the registered range (P7); the generated results report its value. The limited seed sample estimates this spread poorly and does not validate the full optimizer implementation.
 
 ## 5. Exploratory findings
 - **E1.** The sensitivity arm (decay 0.001) gives the same test predictions as the unregularized arm on every seed (`sensitivity_s0..2`, `unregularized_s0..2`). Both non-zero decay values are null on accuracy.
 - **E2.** The logistic baseline (`logistic_s0`) is slightly below the MLP arms, and the class-prior floor (`class_prior_s0`) is at chance. The baseline has one seed and is not tuned.
 - **E3.** Decay changes training: loss histories differ from the unregularized arm at every seed (`L01`, `regularized_s0`, `unregularized_s0`). The model moves, but its test argmax does not.
 - **E4.** Reproducibility audits pass (`L04`, `L05`, `L06`). This was done after the registered comparison, so it is exploratory.
-- **E5.** Weight-level mechanism (`L02`). Decay shrinks the weights in the direction the update rule predicts. The measured shrink is about half of the pure-decay prediction on both decay values. The cause is not identified. Candidate explanations are that the arms follow different gradient trajectories, so their norms also differ for reasons other than decay, and that the norm is taken over all parameters. This explains why the intervention is small, but it does not give an exact magnitude.
-- **E6.** Design sensitivity (`L11`). The paired design resolves about 2.5 pp only if roughly 3 percent of test examples are discordant. The observed discordance is zero, so the minimum detectable effect cannot be measured. Effects below that size are expected to be inconclusive. The research-phase value is reproduced from a normal approximation and an assumed discordance, not from data.
-- **E7.** Post hoc test negative log-likelihood (`L03`). The decay arm has slightly higher NLL on all three seeds, with a conditional bootstrap interval excluding zero. This is the only continuous signal in the study, and it points against the hypothesis. It was chosen after the primary result, so it cannot be promoted to confirmatory.
+- **E5.** Checkpoint norms (`L02`). Fitted arm norm ratios differ from hypothetical pure-decay multiplication. Gradient trajectories also differ, so this is not an isolated decay measurement or a causal explanation for unchanged accuracy.
+- **E6.** Sensitivity scenarios (`L11`). The audit uses assumed discordance rates and a normal approximation. It establishes neither a hard detection limit nor that smaller effects must be inconclusive. Agreement in the observed sample does not prove population agreement or equivalence.
+- **E7.** Post hoc test negative log-likelihood (`L03`). The saved analysis reports higher loss with decay and a conditional interval excluding zero. This exploratory finding concerns a separate endpoint and does not test the primary accuracy hypothesis. Validation loss is another continuous measurement that changed.
 - **E8.** Implementation checks pass today: the split check and the 13-test suite (`L07`, `L09`, `L12`).
 - **E9.** Code audit (`L08`). The fixture's reload check and prediction step run eval-mode forward passes on all 1797 feature rows, which include the 360 test features (the pilot's code path does this too, although the pilot reports validation metrics only). No test label was found in the training or model-selection paths. This is a procedural disclosure, not a leak into the reported metric. It was found by reading code, not by a runtime test.
 - **E10.** Other registered prediction checks (`pilot_regularized_s0`, `shuffled_labels_s0..2`, `logistic_s0`, `class_prior_s0`). The validation and test ranges hold (P4). Shuffled-label accuracy is near chance and under the failure threshold (P5). Class-prior accuracy equals the majority-class fraction of the test split (P6). Accuracy recomputed from stored predictions matches the records (A4(d), `L05`). These arms are labelled exploratory by the fixture, so the outcomes are reported under that label.
@@ -38,9 +38,9 @@ Decoupled weight decay (AdamW, `S01`) is a standard regulariser for MLPs. The qu
 ## 6. Negative and inconclusive findings
 - H1 (decay improves held-out accuracy) is not supported (C1). The result is a null with a degenerate interval, which is not evidence of equivalence.
 - The sensitivity arm is also null on accuracy (E1).
-- The only continuous endpoint points against decay (E7). This is exploratory and must be re-tested with a registered endpoint, not reported as a finding.
-- The mechanism is smaller than the pure-decay arithmetic predicts (E5). This was not anticipated in the preregistration and is recorded as a discrepancy.
-- The design cannot measure an effect smaller than about 2.5 pp (E6). The MDE prediction held only in the sense that no effect was resolved.
+- The exploratory NLL finding differs from the primary accuracy result (E7); a new confirmatory study would require prospective analysis and untouched evaluation data.
+- Checkpoint norms do not isolate the pure-decay mechanism (E5).
+- The sensitivity scenarios do not establish a measured detection threshold (E6).
 
 ## 7. Implications
 - For this fixture and budget, decay has no detectable effect on test argmax, so the registered comparison cannot recommend decay.

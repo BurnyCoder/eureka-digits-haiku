@@ -1,5 +1,7 @@
 # Final report: AdamW weight decay on a fixed digits MLP (cycle 001)
 
+**Historical model-authored report.** The later [parent review](../../../reports/extended-parent-review.md) corrects its hard detection-limit claim, causal interpretation of norm ratios, and description of NLL as the only continuous signal. The corrected interpretation and generated [summary](summary.md) are authoritative for current conclusions and numerical tables. This original report is retained to expose what the model submitted, including its errors.
+
 Author: Libor "Burny" Burian. Cycle status: research, preregister, core, pilot, experiments, analysis, and review phases are accepted. This report is the publish-phase deliverable. It reconciles the README, reports, docs, claims, and requirement checklist with the recorded results. It adds no new experiments and no new test-split evaluation.
 
 ## 1. Result in one paragraph

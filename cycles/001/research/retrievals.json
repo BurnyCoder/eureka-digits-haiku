@@ -24,12 +24,12 @@
     "sample_bytes": 280396
   },
   "S04": {
-    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
-    "final_url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adam.py",
+    "final_url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adam.py",
     "ok": true,
-    "at": "2026-10-29T17:56:05.412+00:00",
-    "sha256": "b9cbfb1e2112b61d7aa88b0f8e2a777ddae9cca5e348e231256f1e39f06f1d92",
-    "sample_bytes": 7535
+    "at": "2026-10-29T21:09:02.900+00:00",
+    "sha256": "5ecb37579ebbec6cdcf4aa69b394136b98d425144a549d679c6369f9c76146b8",
+    "sample_bytes": 40308
   },
   "S05": {
     "url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html",
@@ -64,20 +64,20 @@
     "sample_bytes": 8683
   },
   "S09": {
-    "url": "https://consensus.app/papers/details/cfe1ea949a105c5f953b251b2af3701e/",
-    "final_url": "https://consensus.app/sign-up/?redirect_url=%2Fpapers%2Fdetails%2Fcfe1ea949a105c5f953b251b2af3701e%2F",
+    "url": "https://arxiv.org/abs/2012.13841",
+    "final_url": "https://arxiv.org/abs/2012.13841",
     "ok": true,
-    "at": "2026-10-29T17:56:08.508+00:00",
-    "sha256": "0c85db5c31d82ce29aedde6a122e5c916891e252dcb625a6f122fe065e2d64e0",
-    "sample_bytes": 11585
+    "at": "2026-10-29T21:09:03.073+00:00",
+    "sha256": "62fa738e1d9994486c635fdd2be1bd6ce4a4eb088a8680d1f99ee2307a382100",
+    "sample_bytes": 44179
   },
   "S10": {
-    "url": "https://consensus.app/papers/details/c179f549f272597888e9890895eef7f1/",
-    "final_url": "https://consensus.app/sign-up/?redirect_url=%2Fpapers%2Fdetails%2Fc179f549f272597888e9890895eef7f1%2F",
+    "url": "https://panzhous.github.io/assets/pdf/2024-TPAMI-AdamW.pdf",
+    "final_url": "https://panzhous.github.io/assets/pdf/2024-TPAMI-AdamW.pdf",
     "ok": true,
-    "at": "2026-10-29T17:56:09.192+00:00",
-    "sha256": "dd4a106fc0762c8335064bdee37da706a214622fbcbd02afee32fa0421ca798c",
-    "sample_bytes": 11585
+    "at": "2026-10-29T21:09:03.764+00:00",
+    "sha256": "621ae09932f54987b0ed800efb65685277bf00ad68d1bfc139bf2f4d41c9c310",
+    "sample_bytes": 2000000
   },
   "S11": {
     "url": "https://arxiv.org/abs/1807.03341",
@@ -126,5 +126,21 @@
     "at": "2026-10-29T17:56:11.099+00:00",
     "sha256": "5d1ec0bd3af5d001cc9779de749781ba32c781c94b28890d970b0c9a1378cdaa",
     "sample_bytes": 145867
+  },
+  "S17": {
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+    "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+    "ok": true,
+    "at": "2026-10-29T21:09:04.374+00:00",
+    "sha256": "681a10622e6fa1520fea015ed884e53272ca26d8be1029ab536059d926a52477",
+    "sample_bytes": 76486
+  },
+  "S18": {
+    "url": "https://search.r-project.org/CRAN/refmans/oceCens/html/percci.html",
+    "final_url": "https://search.r-project.org/CRAN/refmans/oceCens/html/percci.html",
+    "ok": true,
+    "at": "2026-10-29T21:09:04.501+00:00",
+    "sha256": "abd971a59f9e8ce38ee8fce4f3f521c6c6debe6dc68882c84868a7cf18094deb",
+    "sample_bytes": 3984
   }
 }
