@@ -1,0 +1,9 @@
+
+# Local execution state and credentials
+.eureka/
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+models/

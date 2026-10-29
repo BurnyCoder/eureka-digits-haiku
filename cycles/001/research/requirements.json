@@ -1,0 +1,156 @@
+[
+  {
+    "id": "policy-01",
+    "heading": "Research existing work and cite sources",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-02",
+    "heading": "Scientific mindset and role models",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-03",
+    "heading": "Experimental design and statistical rigor",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-04",
+    "heading": "Grounding and technical correctness",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-05",
+    "heading": "Principles",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-06",
+    "heading": "Code structure and quality",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-07",
+    "heading": "Claims, evidence and writing style",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-08",
+    "heading": "Paper",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-09",
+    "heading": "README.md and paper",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-10",
+    "heading": "Experiment reports",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-11",
+    "heading": "Visualization",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-12",
+    "heading": "README.md",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-13",
+    "heading": "Docs",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-14",
+    "heading": "Order of work",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-15",
+    "heading": "Logging and comments",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-16",
+    "heading": "Testing, debugging and code review",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-17",
+    "heading": "Git, GitHub and Hugging Face",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-18",
+    "heading": "Environment and project setup",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-19",
+    "heading": "Machine, permissions and tools",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-20",
+    "heading": "README.md ocs, AGENTS.md, docs, results, paper, experiments, reports, experiment files, paper, HuggingFace card",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-21",
+    "heading": "Final checks",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  },
+  {
+    "id": "policy-22",
+    "heading": "Attribution and visual debugging",
+    "status": "pending",
+    "evidence": [],
+    "reason": ""
+  }
+]

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+research-policy.txt -text
+*.png binary
+*.pdf binary
