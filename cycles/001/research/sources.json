@@ -1,0 +1,130 @@
+[
+  {
+    "id": "S01",
+    "title": "Decoupled Weight Decay Regularization (AdamW), Loshchilov & Hutter, ICLR 2019",
+    "url": "https://arxiv.org/abs/1711.05101",
+    "summary": "Shows that L2 regularization and weight decay are equivalent for SGD but not for Adam; proposes decoupling weight decay from the gradient step (AdamW). Abstract claims 'substantially improves Adam's generalization'. Abstract fetched; the full paper's numeric results were not read in this phase. Used for the decoupled-decay mechanism the protocol registers.",
+    "license": "unknown (arXiv listing; paper's own license not read)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S02",
+    "title": "Adam: A Method for Stochastic Optimization, Kingma & Ba, ICLR 2015",
+    "url": "https://arxiv.org/abs/1412.6980",
+    "summary": "Prior method: adaptive first- and second-moment estimates of gradients. Abstract fetched ('based on adaptive estimates of lower-order moments'); update equations were not read in this phase.",
+    "license": "unknown (arXiv listing; not read)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S03",
+    "title": "torch.optim.AdamW documentation (PyTorch 2.15)",
+    "url": "https://docs.pytorch.org/docs/2.15/generated/torch.optim.AdamW.html",
+    "summary": "Signature defaults lr=0.001 and weight_decay=0.01; states 'weight decay does not accumulate in the momentum nor variance'; refers to the decoupled-decay paper (S01). Confirms the protocol's optimizer choice and the default that the protocol overrides explicitly.",
+    "license": "unknown (docs page; PyTorch source repo license not verified in this phase)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S04",
+    "title": "PyTorch adam.py: decoupled weight decay update (torch 2.14.1 installed locally, plus upstream main)",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/torch/optim/adamw.py",
+    "summary": "Upstream adamw.py delegates to adam(..., decoupled_weight_decay=True) and its docstring gives theta <- theta - gamma*lambda*theta. Installed torch 2.14.1 at torch/optim/adam.py:419 executes 'param.mul_(1 - lr * weight_decay)' when decoupled_weight_decay is True. This is the per-step shrink used in the research.md arithmetic.",
+    "license": "unknown (BSD-3-Clause expected for PyTorch; LICENSE file not fetched)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S05",
+    "title": "sklearn.datasets.load_digits documentation",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html",
+    "summary": "1797 samples, 64 integer features in 0-16, 10 classes; 'a copy of the test set of the UCI ML hand-written digits datasets'. Page footer states BSD License for the library/docs, not the dataset.",
+    "license": "BSD-3-Clause for scikit-learn code and docs (per page footer); dataset terms per S06",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S06",
+    "title": "Optical Recognition of Handwritten Digits (UCI ML Repository), Alpaydin & Kaynak 1998",
+    "url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits",
+    "summary": "Source dataset (DOI 10.24432/C50P49). States 'licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license'. The 1797-sample sklearn set equals the UCI optdigits test file; the UCI training file has 3823 examples. Attribution is required when the data is redistributed.",
+    "license": "CC BY 4.0",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S07",
+    "title": "Understanding deep learning requires rethinking generalization, Zhang et al., ICLR 2017",
+    "url": "https://arxiv.org/abs/1611.03530",
+    "summary": "Standard networks 'easily fit a random labeling of the training data'; this behavior is 'qualitatively unaffected by explicit regularization'. Motivates the shuffled-label control: a model that can memorize noise shows that training accuracy alone does not indicate generalization.",
+    "license": "unknown (arXiv listing; not read)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S08",
+    "title": "A Simple Weight Decay Can Improve Generalization, Krogh & Hertz, NIPS 1991 (vol. 4)",
+    "url": "https://papers.nips.cc/paper/1991/hash/8eefcfdf5990e441f0fb6f3fad709e21-Abstract.html",
+    "summary": "Earliest-level prior evidence that weight decay helps feed-forward networks generalize; argues it removes weight components irrelevant to the task (smallest-norm solution) and gives a noise-matched optimal decay in linear networks. Verified from the NIPS proceedings metadata and search summaries; the full text was not read, so the claimed NetTalk experiments are not cited as verified.",
+    "license": "unknown (NeurIPS proceedings)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S09",
+    "title": "Understanding Decoupled and Early Weight Decay, Bjorck et al., 2020",
+    "url": "https://consensus.app/papers/details/cfe1ea949a105c5f953b251b2af3701e/",
+    "summary": "Reports that decoupled weight decay mainly fixes the mixing of the L2 term into Adam's first-moment buffer, and that applying decay only early in training can regularize. Read from the search-index abstract only; the full text was not read. Shows that the decoupled-vs-L2 difference is a known active question, not a settled one.",
+    "license": "unknown",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S10",
+    "title": "Towards Understanding Convergence and Generalization of AdamW, Zhou et al., IEEE TPAMI 2024",
+    "url": "https://consensus.app/papers/details/c179f549f272597888e9890895eef7f1/",
+    "summary": "Claims AdamW minimizes a dynamically regularized loss and has smaller generalization error than Adam and L2-Adam from a Bayesian posterior view. Read from the abstract only; theory not checked and no empirical claims relied upon.",
+    "license": "unknown",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S11",
+    "title": "Troubling Trends in Machine Learning Scholarship, Lipton & Steinhardt, 2018",
+    "url": "https://arxiv.org/abs/1807.03341",
+    "summary": "Lists four patterns to avoid: conflating explanation with speculation, failing to identify sources of empirical gains (e.g., hyperparameter tuning credited as architecture), mathiness, and misuse of technical language. Basis for the requirement that attribution of any gain must be tested, not assumed. Abstract-level summary from search; full text not read.",
+    "license": "unknown (arXiv listing)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S12",
+    "title": "How to avoid machine learning pitfalls: a guide for academic researchers, Lones",
+    "url": "https://arxiv.org/abs/2108.02497",
+    "summary": "Five-stage checklist: before model building, reliable model building, robust evaluation, fair comparison, reporting results. Abstract fetched; the guide's recommendations on leakage and independent test sets were not verified in full text.",
+    "license": "unknown (arXiv listing)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S13",
+    "title": "How I Think About My Research Process (sequence), Neel Nanda",
+    "url": "https://www.alignmentforum.org/s/5GT3yoYM9gRmMEKqL",
+    "summary": "Sequence index; the protocol's cited research-stage reference. Lists the opener 'Explore, Understand, Distill' and three later posts (key mindsets, research taste, writing papers). Per-post text is in S14.",
+    "license": "unknown (Alignment Forum)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S14",
+    "title": "How I Think About My Research Process: Explore, Understand, Distill, Neel Nanda, 26 Apr 2025",
+    "url": "https://www.greaterwrong.com/posts/hjMy4ZxS5ogA9cTYK/how-i-think-about-my-research-process-explore-understand",
+    "summary": "Stage definitions used in the harness: Ideation (choose a problem), Exploration ('Your north star is just to gain information'; check 'am I getting enough information per unit time?'), Understanding ('Convince yourself of a key hypothesis'), Distillation ('Compress your research findings into concise, rigorous truth'). Mirror of the LessWrong post, read directly.",
+    "license": "unknown (LessWrong/GreaterWrong mirror)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S15",
+    "title": "Construction of Confidence Intervals, Dalitz, arXiv:1807.03582",
+    "url": "https://arxiv.org/abs/1807.03582",
+    "summary": "Abstract-level support only: 'for arbitrary estimators the bootstrap is suggested', and coverage/length compared by Monte Carlo. Does not verify the percentile-bootstrap details the analysis plan uses; those remain to be sourced in the analysis phase.",
+    "license": "unknown (arXiv listing)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S16",
+    "title": "safetensors torch API documentation (save_file, load_file)",
+    "url": "https://huggingface.co/docs/safetensors/en/api/torch",
+    "summary": "Documents save_file(tensors, filename) requiring contiguous dense tensors, and load_file(filename, device) returning a dict of tensors. Matches the fixture's use in study.py (fit_mlp), which saves state_dict tensors contiguous and reloads them with strict equality checks.",
+    "license": "unknown (Apache-2.0 expected for safetensors; not verified in this phase)",
+    "accessed_at": "2026-10-29"
+  }
+]
