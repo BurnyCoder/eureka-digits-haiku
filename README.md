@@ -1,15 +1,19 @@
 # eureka-digits-haiku
 
-Execute the fixed digits validation study supplied in this project's cycle directory.
+A bounded Claude Code Haiku execution of the [Auto Eureka Scientist harness](https://github.com/BurnyCoder/auto-eureka-scientist-agent-harness), studying AdamW weight decay on the bundled [UCI digits dataset](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits). The fixed MLP comparison includes a decay ablation, logistic regression, a class-prior baseline, shuffled-label controls, and seed/sensitivity checks.
 
-Investigate whether AdamW weight decay improves the held-out accuracy of the fixed ReLU MLP. Follow the immutable supplied protocol. Use the phase-specific tasks supplied by the harness, actual web research, meaningful code checks, real CUDA training when available, pilot publication before sensitivity experiments, all registered comparisons, careful evidence-linked interpretation, and the requirement checklist.
+The recorded experiments are available, but the run exhausted its active-time budget before analysis, review and final publication were accepted. The generated results below state the observed status and scientific conclusion. Draft claims remain unaccepted; see the [post-run disclosure](reports/post-run-publication.md).
 
-The primary objective of this run is an inspectable completed research cycle, regardless of whether regularization helps, hurts, or has an inconclusive effect. Do not select methods using the test set. Record failures, confounders, alternative explanations, predictions and changes in understanding. Follow Neel Nanda's research stages and prioritize useful learning per unit time. This is a small illustrative study, not evidence of broad scientific reliability or agent superiority.
+[Interactive explorer](https://burnycoder.github.io/eureka-digits-haiku/) · [Paper PDF](cycles/001/reports/paper.pdf) · [Model bundle](https://huggingface.co/BurnyCoder/eureka-digits-haiku-models) · [Model collection](https://huggingface.co/collections/BurnyCoder/eureka-digits-haiku-6ae38bdd8bdaca1527379a69)
 
-Only the selected model/backend may be used. The controller handles publication and budgets. Do not launch other LLMs, coding CLIs, or collaborators. Preserve all recorded artifacts.
+![Interactive filters and recorded accuracies](docs/images/explorer.png)
 
 
-Run status: not yet executed. See cycles/ for protocols, code, and generated reports.
+The [registered protocol](cycles/001/research/protocol.json) fixes the data partition, architecture, optimizer and comparisons before results. The pilot checkpoint was published before sensitivity runs. Saved predictions drive every generated numerical table and figure. PyTorch uses CUDA for neural training when available; scikit-learn supplies the dataset and linear baseline. No test outcome selects a configuration.
+
+Follow the [portable reproduction guide](https://github.com/BurnyCoder/auto-eureka-scientist-agent-harness/blob/main/docs/reproduction.md) to install locked dependencies, download checkpoints, regenerate reports and verify predictions without another model call. The cycle's [original environment and methodology notes](cycles/001/docs/reproduction.md) retain their historical core-phase context; the post-run disclosure corrects their overly strong pilot data-access wording. Elapsed seconds in generated tables include checkpoint reuse and are not a controlled training-speed comparison.
+
+The workflow follows [Neel Nanda's research stages](https://www.alignmentforum.org/s/5GT3yoYM9gRmMEKqL). Its source ledger, protocol history, observations and failures remain available under `cycles/001/`. This particular development trial does not establish broad scientific reliability or agent superiority.
 
 
 <!-- EUREKA:RESULTS:START -->
