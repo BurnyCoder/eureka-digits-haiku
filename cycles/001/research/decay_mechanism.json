@@ -1,0 +1,47 @@
+{
+  "steps": 850,
+  "predicted_shrink_factor": {
+    "regularized": 0.9915359807224441,
+    "unregularized": 1.0,
+    "sensitivity": 0.999150360723004,
+    "shuffled_labels": 0.9915359807224441
+  },
+  "checkpoints": {
+    "regularized_s0_vs_unregularized_s0": {
+      "norm_ratio": 0.9959350228309631,
+      "relative_shrink": 0.004064977169036865,
+      "fraction_entries_changed": 1.0,
+      "max_abs_difference": 0.06818348169326782
+    },
+    "sensitivity_s0_vs_unregularized_s0": {
+      "norm_ratio": 0.99959397315979,
+      "relative_shrink": 0.00040602684020996094,
+      "fraction_entries_changed": 1.0,
+      "max_abs_difference": 0.02735089510679245
+    },
+    "regularized_s1_vs_unregularized_s1": {
+      "norm_ratio": 0.9959800839424133,
+      "relative_shrink": 0.00401991605758667,
+      "fraction_entries_changed": 0.9998959417273673,
+      "max_abs_difference": 0.018944229930639267
+    },
+    "sensitivity_s1_vs_unregularized_s1": {
+      "norm_ratio": 0.9996075630187988,
+      "relative_shrink": 0.0003924369812011719,
+      "fraction_entries_changed": 0.9997918834547347,
+      "max_abs_difference": 0.06007302924990654
+    },
+    "regularized_s2_vs_unregularized_s2": {
+      "norm_ratio": 0.9959414005279541,
+      "relative_shrink": 0.0040585994720458984,
+      "fraction_entries_changed": 1.0,
+      "max_abs_difference": 0.007804572582244873
+    },
+    "sensitivity_s2_vs_unregularized_s2": {
+      "norm_ratio": 0.9995852708816528,
+      "relative_shrink": 0.00041472911834716797,
+      "fraction_entries_changed": 1.0,
+      "max_abs_difference": 0.004554267972707748
+    }
+  }
+}

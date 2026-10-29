@@ -1,0 +1,13 @@
+{
+  "scope": "Artifact publication after the bounded trial; no additional model invocation or accepted research phase",
+  "models": {
+    "repository": "BurnyCoder/eureka-digits-haiku-models",
+    "url": "https://huggingface.co/BurnyCoder/eureka-digits-haiku-models",
+    "collection": "https://huggingface.co/collections/BurnyCoder/eureka-digits-haiku-6ae38bdd8bdaca1527379a69",
+    "upload": {
+      "url": "https://huggingface.co/BurnyCoder/eureka-digits-haiku-models/commit/e68ae027e3ffc9258fc7f73b29e61c4ba2f51243"
+    },
+    "verified": true,
+    "at": "2026-10-29T19:12:53.845+00:00"
+  }
+}

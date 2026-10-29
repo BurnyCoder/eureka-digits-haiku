@@ -7,7 +7,9 @@ fontsize: 10pt
 
 # Abstract
 
-This report records a bounded research cycle executed through Claude Code. The registered primary comparison is pending; no confirmatory conclusion is available.
+This report records a bounded research cycle executed through Claude Code. The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap interval [0.000000, 0.000000]. The registered decision is **inconclusive**. The sample standard deviation across seed effects is 0.000000. The interval uses 10000 paired resamples of test examples and conditions on the trained models.
+
+Recorded harness status: **budget_exhausted**; 5 operational phases accepted. Measurements below do not imply completion of unaccepted phases.
 
 # Context, motivation, and introduction
 
@@ -33,11 +35,25 @@ The objective is reproducible evidence and an inspectable research process. This
 
 # Results
 
-| Experiment | Method | Seed | Split | Accuracy | Seconds | Device |
-|---|---|---:|---|---:|---:|---|
-| pilot_regularized_s0 | regularized | 0 | validation | 0.966574 | 6.805 | cuda |
+| Method | Seed | Split | Accuracy | Seconds | Device |
+|-------------------------|-----:|------------|-----------:|----------:|----------|
+| class prior | 0 | test | 0.102778 | 0.026 | cpu |
+| logistic | 0 | test | 0.955556 | 0.107 | cpu |
+| regularized | 0 | validation | 0.966574 | 6.805 | cuda |
+| regularized | 0 | test | 0.963889 | 0.486 | cuda |
+| regularized | 1 | test | 0.969444 | 6.630 | cuda |
+| regularized | 2 | test | 0.969444 | 2.553 | cuda |
+| sensitivity | 0 | test | 0.963889 | 2.525 | cuda |
+| sensitivity | 1 | test | 0.969444 | 2.583 | cuda |
+| sensitivity | 2 | test | 0.969444 | 2.481 | cuda |
+| shuffled labels | 0 | test | 0.061111 | 2.465 | cuda |
+| shuffled labels | 1 | test | 0.116667 | 2.470 | cuda |
+| shuffled labels | 2 | test | 0.108333 | 2.367 | cuda |
+| unregularized | 0 | test | 0.963889 | 2.426 | cuda |
+| unregularized | 1 | test | 0.969444 | 2.393 | cuda |
+| unregularized | 2 | test | 0.969444 | 2.501 | cuda |
 
-The registered primary comparison is pending; no confirmatory conclusion is available.
+The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap interval [0.000000, 0.000000]. The registered decision is **inconclusive**. The sample standard deviation across seed effects is 0.000000. The interval uses 10000 paired resamples of test examples and conditions on the trained models.
 
 ![All recorded accuracies](../figures/accuracy.png)
 
@@ -49,12 +65,13 @@ Claims have not yet been distilled.
 
 # Discussion, implications, and learnings
 
-This is a preliminary artifact generated before final interpretation. All available outcomes are retained; a completed experiment is not evidence that the favored hypothesis is true.
+The analysis phase was not accepted before this run stopped. Its draft interpretation and claim ledger are preserved in the repository, but are excluded from this generated paper because their evidence contracts remain unresolved. The tables and primary calculation above are regenerated from saved predictions; review remains incomplete.
 
 # Limitations
 
 - Conditional test-example intervals do not estimate variation over new training seeds, writers, or datasets.
 - A small single-task study does not establish general model or harness superiority.
+- No discordant predictions were observed in the primary pairs. The empirical bootstrap interval collapses to zero; this is not an equivalence test or a guarantee about unseen examples.
 
 Exploratory outcomes do not become confirmatory by inclusion in this document. Missing metrics are not zero. Measurements without an applicable recorded objective are omitted; see the requirement checklist for explanations.
 
@@ -76,10 +93,12 @@ Exploratory outcomes do not become confirmatory by inclusion in this document. M
 - [S14: How I Think About My Research Process: Explore, Understand, Distill, Neel Nanda, 26 Apr 2025](https://www.greaterwrong.com/posts/hjMy4ZxS5ogA9cTYK/how-i-think-about-my-research-process-explore-understand)
 - [S15: Construction of Confidence Intervals, Dalitz, arXiv:1807.03582](https://arxiv.org/abs/1807.03582)
 - [S16: safetensors torch API documentation (save_file, load_file)](https://huggingface.co/docs/safetensors/en/api/torch)
+- [S17: scipy.stats.bootstrap documentation (percentile method, paired option)](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)
+- [S18: oceCens percci documentation (percentile interval, citing Efron & Tibshirani 1993, p. 168)](https://search.r-project.org/CRAN/refmans/oceCens/html/percci.html)
 
 # Conclusion
 
-The registered primary comparison is pending; no confirmatory conclusion is available.
+The mean paired accuracy difference is 0.000000, with conditional 95% bootstrap interval [0.000000, 0.000000]. The registered decision is **inconclusive**. The sample standard deviation across seed effects is 0.000000. The interval uses 10000 paired resamples of test examples and conditions on the trained models.
 
 # Appendix: reproducibility and provenance
 
@@ -87,4 +106,4 @@ The committed protocol, per-experiment JSON files, saved predictions, loss histo
 
 # AI statement
 
-Codex wrote the harness and supplied study fixture. Claude Code executed this cycle's research phases and authored its interpretation; the harness generated the paper from recorded artifacts. A human provided the exact specification that was executed. Human cleanup and rewriting are in progress.
+Codex wrote the harness and study fixture; Claude Code performed this cycle and authored its interpretation. The harness generated this paper from recorded artifacts. A human supplied the exact specification. Human cleanup and rewriting are in progress.

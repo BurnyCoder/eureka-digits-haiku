@@ -1,0 +1,34 @@
+{
+  "github": {
+    "sha": "0b37f0de48f8b001c757fed5ad20b5570d4e231d",
+    "pr": "https://github.com/BurnyCoder/eureka-digits-haiku/pull/2",
+    "url": "https://github.com/BurnyCoder/eureka-digits-haiku",
+    "at": "2026-10-29T18:09:52.076+00:00"
+  },
+  "models": {
+    "repository": "BurnyCoder/eureka-digits-haiku-models",
+    "url": "https://huggingface.co/BurnyCoder/eureka-digits-haiku-models",
+    "collection": "https://huggingface.co/collections/BurnyCoder/eureka-digits-haiku-6ae38bdd8bdaca1527379a69",
+    "upload": {
+      "url": "https://huggingface.co/BurnyCoder/eureka-digits-haiku-models/commit/c650877b4cdede8e7d879421e92f9aade65d9b54"
+    },
+    "verified": true,
+    "at": "2026-10-29T18:09:37.546+00:00"
+  },
+  "pages": {
+    "url": "https://api.github.com/repos/BurnyCoder/eureka-digits-haiku/pages",
+    "status": null,
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://burnycoder.github.io/eureka-digits-haiku/",
+    "build_type": "workflow",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  }
+}

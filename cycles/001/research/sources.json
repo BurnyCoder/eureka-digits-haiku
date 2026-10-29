@@ -126,5 +126,21 @@
     "summary": "Documents save_file(tensors, filename) requiring contiguous dense tensors, and load_file(filename, device) returning a dict of tensors. Matches the fixture's use in study.py (fit_mlp), which saves state_dict tensors contiguous and reloads them with strict equality checks.",
     "license": "unknown (Apache-2.0 expected for safetensors; not verified in this phase)",
     "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S17",
+    "title": "scipy.stats.bootstrap documentation (percentile method, paired option)",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+    "summary": "Documents the percentile interval method (noted as the most intuitive but rarely used in practice, with BCa as default) and a paired=True option for resampling paired samples. Read as search-result summary in the analysis phase, not as full text. Used to source the percentile-bootstrap choice for the paired CI.",
+    "license": "unknown (SciPy docs, BSD-3-Clause expected; not verified)",
+    "accessed_at": "2026-10-29"
+  },
+  {
+    "id": "S18",
+    "title": "oceCens percci documentation (percentile interval, citing Efron & Tibshirani 1993, p. 168)",
+    "url": "https://search.r-project.org/CRAN/refmans/oceCens/html/percci.html",
+    "summary": "States that the percentile interval is taken from the bootstrap replicates and cites Efron & Tibshirani (1993, p. 168) for the method. Read as search-result summary in the analysis phase. The book itself (An Introduction to the Bootstrap, 1993) was not read; the page number is as cited by this document.",
+    "license": "unknown (CRAN package documentation)",
+    "accessed_at": "2026-10-29"
   }
 ]

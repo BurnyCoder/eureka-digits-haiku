@@ -1,0 +1,125 @@
+{
+  "records": {
+    "class_prior_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "logistic_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "pilot_regularized_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "regularized_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "regularized_s1": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "regularized_s2": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "sensitivity_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "sensitivity_s1": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "sensitivity_s2": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "shuffled_labels_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "shuffled_labels_s1": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "shuffled_labels_s2": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "unregularized_s0": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "unregularized_s1": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    },
+    "unregularized_s2": {
+      "accuracy": true,
+      "example_ids": true,
+      "y_true": true,
+      "y_pred": true,
+      "history": true,
+      "checkpoint_sha256": true
+    }
+  },
+  "all_match": true
+}
