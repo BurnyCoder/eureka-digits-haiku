@@ -4,7 +4,7 @@ A bounded Claude Code Haiku execution of the [Auto Eureka Scientist harness](htt
 
 The recorded experiments are available, but the run exhausted its active-time budget before analysis, review and final publication were accepted. The generated results below state the observed status and scientific conclusion. Draft claims remain unaccepted; see the [post-run disclosure](reports/post-run-publication.md).
 
-[Interactive explorer](https://burnycoder.github.io/eureka-digits-haiku/) · [Paper PDF](cycles/001/reports/paper.pdf) · [Model bundle](https://huggingface.co/BurnyCoder/eureka-digits-haiku-models) · [Model collection](https://huggingface.co/collections/BurnyCoder/eureka-digits-haiku-6ae38bdd8bdaca1527379a69)
+[Interactive explorer](https://burnycoder.github.io/eureka-digits-haiku/) · [Paper PDF](cycles/001/reports/paper.pdf) · [Model bundle](https://huggingface.co/BurnyCoder/eureka-digits-haiku-models) · [Shared project collection](https://huggingface.co/collections/BurnyCoder/auto-eureka-scientist-6ae3ae37b267f00aef999f75)
 
 ![Interactive filters and recorded accuracies](docs/images/explorer.png)
 
